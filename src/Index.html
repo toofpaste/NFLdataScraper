@@ -1,32 +1,125 @@
 <head>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="doctor-interface.js"></script>
+    <script src="//localhost:8080/require/client"></script>
 
     <title>Doctor Lookup</title>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light" id = "nav">
-    <a class="navbar-brand" href="#">
-        <img src="http://nationalpainreport.com/wp-content/uploads/2014/07/bigstock-Doctor-physician-Isolated-ov-33908342-e1446160270762.jpg" width="90" height="60" class="d-inline-block align-top" alt="">
-        Doctor Lookup
-    </a>
-</nav>
 <div class="container">
-    <h1>Find a doctor</h1>
-    <label for="city">Enter a City:</label>
-    <input id="city" type="text">
-    <br>
-    <label for="search">Choose a Symptom:</label>
-    <select id="search"></select>
-    <br>
-    <label for="name">Enter a Doctors Name:</label>
-    <input id="name" type="text">
-    <button class="btn-success" id="doctorSearch">Get Information</button>
 
-    <div class="errors"></div>
     <div id="title"></div>
-    <div id="docs"></div>
-    <div id="redTop"></div>
+    <h1 id="title1">Rankings By Draft POS</h1>
+    <h4 id="title2">draft positions take from 4 sources</h4>
+    <h4 id="title2">stats takes from 6 Databases</h4>
+    <h4 id="title2">Algorithm checks Yahoo, Fan Duel, SportsData, DraftKings, FantasyDraft</h4>
+    <h4 id="title2">, and PPR Fantasy site rankings/stats for the smart ranks</h4>
+    <h6 id="sortSmartSort"><button>Show By Smart Sort</button></h6>
+    <div id="list1">
+
+    <div id="qb1">
+        <h3>QB's by Draft POS</h3>
+        <div id="qbsDraft">
+            <table id="qbTable">
+                <th>Rank</th>
+                <th>Player</th>
+                <th id="sortAvgDraftPos">Avg Draft Pos</th>
+                <th>2019 games</th>
+                <th id="sortProjPoints">Proj Points</th>
+                <th id="sortProjPassYards">Proj Pass Yards</th>
+                <th id="sortProjPassTDs">Proj Pass TDs</th>
+                <th id="sortProjTotalTDs">Proj Total TDs</th>
+                <th id="sortProjAdjustedPoints">Proj Adjusted Points</th>
+                <th>Proj Passing Attempts</th>
+                <th>Proj Passing Y/A</th>
+                <th id="sortPointsOffBigPlays">Points off big plays</th>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="wr1">
+        <h3>WR's by Draft POS</h3>
+        <div id="wrDraft">
+            <table id="wrTable">
+                <th>Rank</th>
+                <th>Player</th>
+                <th id="sortAvgDraftPos">Avg Draft Pos</th>
+                <th>2019 games</th>
+                <th id="sortProjPoints">Proj Points</th>
+                <th id="sortProjReceivingTDs">Proj Receiving TDs</th>
+                <th id="sortProjReceivingYards">Proj Receiving Yards</th>
+                <th>Career Receiving Targets</th>
+                <th id="sortProjAdjustedPoints">Proj Adjusted Points</th>
+                <th>Career Touchdowns <10 yards</th>
+                <th>Career Touchdowns <20 yards</th>
+                <th>Career Touchdowns <30 yards</th>
+                <th>Career Touchdowns <40 yards</th>
+                <th>Career Touchdowns <50 yards</th>
+                <th>Career Touchdowns <60 yards</th>
+                <th>Career Touchdowns <70 yards</th>
+                <th>Career Touchdowns <80 yards</th>
+                <th>Career Touchdowns <90 yards</th>
+                <th id="sortPointsOffBigPlays">Points off big plays</th>
+
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="rb1">
+        <h3>RB's by Draft POS</h3>
+        <div id="rbsDraft">
+               <table id="rbTable">
+                   <th>Rank</th>
+                    <th>Player</th>
+                    <th id="sortAvgDraftPos">Avg Draft Pos</th>
+                    <th>2019 games</th>
+                    <th id="sortProjPoints">Proj Points</th>
+                    <th id="sortProjRushYards">Proj Rush Yards</th>
+                    <th id="sortProjRushTDs">Proj Rush TDs</th>
+                    <th id="sortProjTotalTDs">Proj Total TDs</th>
+                   <th id="sortProjAdjustedPoints">Proj Adjusted Points</th>
+                   <th>Career Touchdowns <10 yards</th>
+                   <th>Career Touchdowns <20 yards</th>
+                   <th>Career Touchdowns <30 yards</th>
+                   <th>Career Touchdowns <40 yards</th>
+                   <th>Career Touchdowns <50 yards</th>
+                   <th>Career Touchdowns <60 yards</th>
+                   <th>Career Touchdowns <70 yards</th>
+                   <th>Career Touchdowns <80 yards</th>
+                   <th>Career Touchdowns <90 yards</th>
+                   <th id="sortPointsOffBigPlays">Points off big plays</th>
+
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="k1">
+        <h3>Kickers's by Draft POS</h3>
+        <div id="kickersDraft">
+            <table id="kTable">
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Avg Draft Pos</th>
+                <th>2019 games</th>
+                <th>Proj Points</th>
+                <th>Proj Extra Points</th>
+                <th>Proj FG Made</th>
+                <th>Career FG Yards</th>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
 </div>
 </body>
 </html>
